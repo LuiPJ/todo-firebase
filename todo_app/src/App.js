@@ -21,7 +21,6 @@ function App() {
     const q = query(collection(db, "todos"));
     const unsub = onSnapshot(q, (querySnapshot) => {
       let todoArray = [];
-      console.log(querySnapshot.forEach((snapshot) => snapshot));
       querySnapshot.forEach((snapshot) => {
         todoArray.push({ ...snapshot.data(), id: snapshot.id });
       });
@@ -42,7 +41,6 @@ function App() {
   const handleDelete = async (id) => {
     await deleteDoc(doc(db, "todos", id));
   };
-  console.log(todos.map((el) => el));
   return (
     <div className="App">
       <div>
