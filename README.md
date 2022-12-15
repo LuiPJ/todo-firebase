@@ -1,1 +1,1 @@
-# todo-firebase
+# Для запуска проекта используй npm i, затем npm start!
